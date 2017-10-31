@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Model2</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>MemberFrontController</servlet-name>
+		<servlet-class>net.member.action.MemberFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberFrontController</servlet-name>
+		<url-pattern>*.me</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BoardFrontController</servlet-name>
+		<servlet-class>net.board.action.BoardFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BoardFrontController</servlet-name>
+		<url-pattern>*.bo</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>BNSFrontController</servlet-name>
+		<servlet-class>net.bns.action.BNSFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BNSFrontController</servlet-name>
+		<url-pattern> *.bns</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>INSFrontController</servlet-name>
+		<servlet-class>net.ins.action.INSFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>INSFrontController</servlet-name>
+		<url-pattern> *.ins</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ModFrontController</servlet-name>
+		<servlet-class>net.mod.action.ModFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModFrontController</servlet-name>
+		<url-pattern> *.mo</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PackFrontController</servlet-name>
+		<servlet-class>net.pack.action.PackFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PackFrontController</servlet-name>
+		<url-pattern>*.po</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ReplyFrontController</servlet-name>
+		<servlet-class>net.reply.action.ReplyFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReplyFrontController</servlet-name>
+		<url-pattern>*.ro</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AdminFrontController</servlet-name>
+		<servlet-class>net.admin.order.action.AdminFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminFrontController</servlet-name>
+		<url-pattern>*.ao</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MainFrontController</servlet-name>
+		<servlet-class>net.main.action.MainFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainFrontController</servlet-name>
+		<url-pattern>*.fo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>JsonController</servlet-name>
+		<servlet-class>net.json.action.JsonController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JsonController</servlet-name>
+		<url-pattern>*.jc</url-pattern>
+	</servlet-mapping>
+
+	<resource-ref>
+		<description>dkdkd</description>
+		<res-ref-name>jdbc/mysqlDB</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+</web-app>
